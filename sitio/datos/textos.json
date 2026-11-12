@@ -1,0 +1,332 @@
+{
+  "_nota": "Todos los textos de la página. Son provisionales. Puedes usar estas claves entre llaves y se sustituyen solas: {marca}, {eslogan}, {correo}, {telefono}, {horario}, {zona}, {ciudad}, {estado}. Después de editar ejecuta: node herramientas/construir.mjs",
+
+  "meta": {
+    "titulo": "{marca} · Joyería hecha a mano en Guadalajara, Jalisco",
+    "descripcion": "Collares y aretes de perlas y piedras naturales, hechos a mano en Guadalajara, Jalisco. Explora la colección y haz tu pedido por WhatsApp.",
+    "altCompartir": "Collar de perlas blancas de dos hilos sobre una superficie clara."
+  },
+
+  "avisoPrototipo": "Prototipo: las piezas, las fotos y los datos de contacto que ves aquí son de ejemplo.",
+  "avisoPrototipoEtiqueta": "Aviso de prototipo",
+  "saltar": "Saltar al contenido",
+  "etiquetaProvisional": "provisional",
+  "nuevaPestana": "se abre en una pestaña nueva",
+
+  "navegacion": {
+    "etiqueta": "Menú principal",
+    "abrirMenu": "Abrir menú",
+    "enlaces": [
+      { "id": "inicio", "texto": "Inicio" },
+      { "id": "coleccion", "texto": "Colección" },
+      { "id": "nosotros", "texto": "Sobre nosotros" },
+      { "id": "como-pedir", "texto": "Cómo pedir" },
+      { "id": "contacto", "texto": "Contacto" }
+    ],
+    "pedido": "Haz tu pedido"
+  },
+
+  "hero": {
+    "antetitulo": "Joyería artesanal de Guadalajara, Jalisco",
+    "titulo": "Lo hecho a mano",
+    "tituloAcento": "se nota",
+    "apoyo": "Collares y aretes de perlas y piedras naturales, elaborados uno por uno.",
+    "botonColeccion": "Ver colección",
+    "botonWhatsApp": "Pedir por WhatsApp",
+    "foto": {
+      "base": "ejemplo-portada-perlas-madera",
+      "alt": "Foto de ejemplo: collar de perlas con cadena dorada sobre una base de madera."
+    },
+    "datos": ["Hecho a mano", "Más de 10 años de experiencia", "Guadalajara, Jalisco"]
+  },
+
+  "categorias": {
+    "titulo": "Compra por categoría",
+    "apoyo": "Empieza por lo que más te gusta.",
+    "contadorUno": "1 pieza",
+    "contador": "{n} piezas",
+    "ver": "Ver {categoria}"
+  },
+
+  "masVendidos": {
+    "titulo": "Los más vendidos",
+    "apoyo": "Las piezas que más nos piden.",
+    "etiqueta": "Más vendido"
+  },
+
+  "coleccion": {
+    "titulo": "La colección",
+    "apoyo": "Cada pieza se elabora a mano. Toca una para ver sus detalles o añádela a tu bolsa.",
+    "sinJs": "Para ver la colección interactiva necesitas activar JavaScript en tu navegador. Mientras tanto, escríbenos y con gusto te mostramos las piezas.",
+    "sinJsBoton": "Escribir por WhatsApp",
+    "errorCarga": "No pudimos cargar la colección. Revisa tu conexión y vuelve a intentarlo, o escríbenos por WhatsApp.",
+    "reintentar": "Volver a intentar",
+    "notaFotos": "Las fotos son de ejemplo y pueden no corresponder a la pieza."
+  },
+
+  "filtros": {
+    "boton": "Filtrar",
+    "categoria": "Categoría",
+    "todos": "Todos",
+    "material": "Material",
+    "precio": "Precio",
+    "precioMin": "Mínimo",
+    "precioMax": "Máximo",
+    "buscar": "Buscar en la colección",
+    "buscarEjemplo": "Nombre, material o categoría",
+    "limpiar": "Limpiar filtros",
+    "activos": "Filtros activos",
+    "quitar": "Quitar filtro: {nombre}",
+    "busqueda": "Búsqueda: {texto}",
+    "mostrando": "Mostrando {n} de {total} {sustantivo}",
+    "sustantivo": "piezas",
+    "vacioTitulo": "No encontramos piezas así",
+    "vacioTexto": "Prueba con otro material o limpia los filtros para ver toda la colección."
+  },
+
+  "pieza": {
+    "precioConsulta": "Consulta precio por WhatsApp",
+    "anadir": "Añadir a mi bolsa",
+    "anadida": "Añadida a tu bolsa",
+    "pedir": "Pedir esta pieza",
+    "verDetalle": "Ver detalle",
+    "caracteristicas": "Características",
+    "fotoEjemplo": "Foto de ejemplo",
+    "notaFoto": "Foto de ejemplo. La pieza real puede variar.",
+    "galeria": "Fotos de la pieza",
+    "verFoto": "Ver foto {n} de {total}",
+    "cerrar": "Cerrar"
+  },
+
+  "buscador": {
+    "abrir": "Buscar",
+    "cerrar": "Cerrar buscador",
+    "etiqueta": "Buscar piezas",
+    "ejemplo": "Busca por nombre, material o categoría",
+    "ayuda": "Usa las flechas para moverte por los resultados y Enter para abrir uno.",
+    "sinResultados": "No encontramos nada con «{texto}». Prueba con otra palabra, por ejemplo «perlas» o «aretes».",
+    "unResultado": "1 resultado",
+    "resultados": "{n} resultados",
+    "verTodos": "Ver todo en la colección"
+  },
+
+  "bolsa": {
+    "titulo": "Tu bolsa",
+    "abrirVacia": "Abrir tu bolsa. Está vacía",
+    "abrirUna": "Abrir tu bolsa. Tiene 1 pieza",
+    "abrir": "Abrir tu bolsa. Tiene {n} piezas",
+    "cerrar": "Cerrar bolsa",
+    "vacioTitulo": "Tu bolsa está vacía",
+    "vacioTexto": "Cuando una pieza te guste, añádela aquí y arma tu pedido con calma.",
+    "verColeccion": "Ver la colección",
+    "enviar": "Enviar pedido por WhatsApp",
+    "nota": "Aquí no se paga nada. Al enviar se abre WhatsApp con tu pedido ya escrito y ahí afinamos precio y detalles.",
+    "vaciar": "Vaciar bolsa",
+    "confirmarVaciar": "¿Vaciar toda la bolsa?",
+    "siVaciar": "Sí, vaciar",
+    "cancelar": "Cancelar",
+    "totalUna": "1 pieza en total",
+    "total": "{n} piezas en total",
+    "cantidad": "Cantidad de {nombre}",
+    "sumar": "Añadir una unidad de {nombre}",
+    "restar": "Quitar una unidad de {nombre}",
+    "quitar": "Quitar {nombre} de la bolsa",
+    "maximo": "Máximo {max} por pieza. Si necesitas más, cuéntanos por WhatsApp.",
+    "maximoDistintas": "Tu bolsa ya tiene {max} piezas distintas. Envía este pedido y seguimos por WhatsApp.",
+    "mensajeLargo": "Tu pedido es grande: en el mensaje caben {incluidas} de tus {total} piezas distintas. Las demás puedes escribirlas en el chat.",
+    "anuncioAnadida": "{nombre} se añadió a tu bolsa. Llevas {n} en total.",
+    "anuncioCantidad": "{nombre}: {cantidad} en tu bolsa.",
+    "anuncioQuitada": "{nombre} se quitó de tu bolsa.",
+    "anuncioVacia": "Tu bolsa quedó vacía."
+  },
+
+  "nosotros": {
+    "titulo": "Hecho a mano, con calma y con cuidado",
+    "parrafos": [
+      "Somos una marca de joyería hecha a mano en Guadalajara, Jalisco. Desde hace más de 10 años elaboramos collares y aretes de perlas y piedras naturales, uno por uno.",
+      "Cada pieza pide su tiempo: paciencia para armarla, esfuerzo para que quede bien y cuidado en los detalles que casi no se ven, pero se sienten al usarla.",
+      "Por eso preferimos atenderte de cerca. Nos escribes, nos cuentas qué buscas y afinamos tu pedido contigo."
+    ],
+    "foto": {
+      "base": "ejemplo-manos-trabajando",
+      "alt": "Foto de ejemplo: manos ensartando cuentas en un telar pequeño, con unas pinzas a un lado."
+    },
+    "valores": [
+      { "icono": "manos", "titulo": "A mano, pieza por pieza", "texto": "Cada collar y cada par de aretes se elabora a mano." },
+      { "icono": "reloj", "titulo": "Más de 10 años", "texto": "De experiencia trabajando perlas y piedras naturales." },
+      { "icono": "lugar", "titulo": "Desde Guadalajara", "texto": "Hecho en Jalisco, con atención cercana por WhatsApp." }
+    ]
+  },
+
+  "comoPedir": {
+    "titulo": "Cómo pedir",
+    "apoyo": "Pedir es sencillo: eliges, nos escribes y afinamos los detalles contigo.",
+    "pasos": [
+      { "icono": "paso-elegir", "titulo": "Elige tus collares", "texto": "Recorre la colección y elige los collares y aretes que más te gusten." },
+      { "icono": "paso-bolsa", "titulo": "Añádelos a tu bolsa", "texto": "Con el botón «Añadir a mi bolsa». Puedes sumar o quitar piezas cuando quieras." },
+      { "icono": "paso-enviar", "titulo": "Envía tu pedido por WhatsApp", "texto": "Tu bolsa escribe el mensaje por ti; solo tienes que enviarlo." },
+      { "icono": "paso-atender", "titulo": "Te atendemos y afinamos los detalles contigo", "texto": "Por WhatsApp confirmamos tu pedido, el precio y todo lo que necesites saber." }
+    ],
+    "pasoEtiqueta": "Paso {n}",
+    "nota": "Aquí no se paga nada: la página solo te ayuda a armar tu pedido.",
+    "boton": "Haz tu pedido"
+  },
+
+  "preguntas": {
+    "titulo": "Preguntas frecuentes",
+    "apoyo": "Lo que más nos preguntan, en corto.",
+    "lista": [
+      {
+        "pregunta": "¿Cómo hago un pedido?",
+        "respuesta": "Elige tus piezas en la colección, añádelas a tu bolsa y envía tu pedido por WhatsApp con un solo botón. Ahí te atendemos y afinamos los detalles contigo. Si prefieres correo o llamada, usa el formulario de contacto."
+      },
+      {
+        "pregunta": "¿De qué materiales son las piezas?",
+        "respuesta": "Trabajamos con perlas, como las cultivadas y las de agua dulce, y con piedras naturales de joyería como turquesa, amatista, cuarzo rosa, ojo de tigre, lapislázuli y ágata. En el detalle de cada pieza encontrarás su material."
+      },
+      {
+        "pregunta": "¿De verdad están hechas a mano?",
+        "respuesta": "Sí. Cada collar y cada par de aretes se elabora a mano en Guadalajara, Jalisco, con paciencia y cuidado por el detalle. Llevamos más de 10 años haciéndolo."
+      },
+      {
+        "pregunta": "¿Cuánto tarda la elaboración de una pieza?",
+        "respuesta": "Depende de la pieza. Cuando nos escribas por WhatsApp te confirmamos el tiempo de elaboración de tu pedido."
+      },
+      {
+        "pregunta": "¿Cuánto cuestan las piezas?",
+        "respuesta": "Por ahora los precios se consultan por WhatsApp. Escríbenos con las piezas que te interesan y te damos el precio de cada una."
+      },
+      {
+        "pregunta": "¿Cómo cuido mis collares y aretes?",
+        "respuesta": "Guárdalos por separado, de preferencia en una bolsita de tela. Evita el contacto con perfume, cremas y agua, y límpialos con un paño suave y seco después de usarlos. Las perlas son delicadas: póntelas al final, cuando ya terminaste de arreglarte."
+      },
+      {
+        "pregunta": "¿Cómo puedo contactarlos?",
+        "respuesta": "El camino más rápido es WhatsApp. También puedes llamarnos, escribirnos por correo o usar el formulario de contacto. Nuestro horario de atención: {horario}."
+      },
+      {
+        "pregunta": "¿Hacen envíos? ¿Tienen cambios o garantía?",
+        "respuesta": "Los envíos, los cambios y la garantía los vemos contigo directamente por WhatsApp, según tu pedido. Escríbenos y resolvemos tus dudas."
+      }
+    ]
+  },
+
+  "contacto": {
+    "titulo": "Contacto",
+    "apoyo": "Escríbenos por WhatsApp y armamos tu pedido juntos.",
+    "botonWhatsApp": "Escribir por WhatsApp",
+    "etiquetas": {
+      "whatsapp": "WhatsApp",
+      "telefono": "Teléfono",
+      "correo": "Correo",
+      "zona": "Dónde estamos",
+      "horario": "Horario de atención",
+      "redes": "Redes sociales"
+    },
+    "zonaDetalle": "{zona} · Hecho en {ciudad}, {estado}",
+    "instagram": "Instagram de {marca}",
+    "facebook": "Facebook de {marca}",
+    "whatsappRed": "WhatsApp de {marca}"
+  },
+
+  "formulario": {
+    "titulo": "¿Prefieres correo o llamada?",
+    "apoyo": "Déjanos tus datos y te contactamos. Para pedidos, lo más rápido sigue siendo WhatsApp.",
+    "avisoSimulado": "Formulario de demostración: en este prototipo el envío es simulado y tu mensaje no llega a nadie.",
+    "sinJs": "Este formulario necesita JavaScript. Mientras tanto, escríbenos por WhatsApp.",
+    "leyenda": "Dato obligatorio",
+    "obligatorio": "obligatorio",
+    "opcional": "opcional",
+    "nombre": "Nombre",
+    "correo": "Correo electrónico",
+    "telefono": "Teléfono",
+    "telefonoAyuda": "10 dígitos, con lada.",
+    "medio": "¿Cómo prefieres que te contactemos?",
+    "medios": { "correo": "Correo", "telefono": "Teléfono", "whatsapp": "WhatsApp" },
+    "producto": "Pieza de interés",
+    "productoNinguna": "Ninguna en particular",
+    "mensaje": "Mensaje",
+    "mensajeAyuda": "Hasta {max} caracteres.",
+    "consentimiento": "He leído y acepto el aviso de privacidad.",
+    "leerAviso": "Leer el aviso de privacidad",
+    "enviar": "Enviar mensaje",
+    "enviando": "Enviando…",
+    "resumenErrores": "Revisa estos datos antes de enviar:",
+    "errores": {
+      "nombreVacio": "Escribe tu nombre.",
+      "nombreInvalido": "Escribe tu nombre solo con letras (entre 2 y 80).",
+      "correoVacio": "Escribe tu correo electrónico.",
+      "correoInvalido": "Escribe un correo válido, por ejemplo nombre@correo.com.",
+      "telefonoVacio": "Escribe tu teléfono.",
+      "telefonoInvalido": "Escribe un teléfono válido de 10 dígitos, con lada.",
+      "medioVacio": "Elige cómo prefieres que te contactemos.",
+      "productoInvalido": "Elige una pieza de la lista.",
+      "mensajeLargo": "Tu mensaje es muy largo. Acórtalo a {max} caracteres.",
+      "consentimientoVacio": "Para enviar el formulario necesitamos que aceptes el aviso de privacidad.",
+      "servidor": "No pudimos enviar tu mensaje. Inténtalo de nuevo en unos minutos o escríbenos por WhatsApp.",
+      "demasiados": "Recibimos varios mensajes seguidos. Espera unos minutos e inténtalo de nuevo."
+    },
+    "exitoTitulo": "¡Gracias, {nombre}!",
+    "exitoTexto": "Recibimos tu mensaje y muy pronto te contactamos.",
+    "exitoSimuladoEtiqueta": "Simulación",
+    "exitoSimulado": "Así se verá la confirmación. En este prototipo tu mensaje no se envió ni se guardó. Para hacer un pedido de verdad, escríbenos por WhatsApp.",
+    "otroMensaje": "Escribir otro mensaje"
+  },
+
+  "privacidad": {
+    "titulo": "Aviso de privacidad",
+    "borrador": "Borrador provisional. Este texto debe revisarlo un profesional antes de publicar la versión final del sitio.",
+    "secciones": [
+      {
+        "titulo": "Quién es responsable de tus datos",
+        "texto": "{marca}, marca de joyería hecha a mano en {ciudad}, {estado}, es responsable de los datos personales que nos compartes a través de este sitio."
+      },
+      {
+        "titulo": "Qué datos te pedimos",
+        "texto": "Solo los que tú escribes en el formulario de contacto: nombre, correo electrónico, teléfono y tu mensaje."
+      },
+      {
+        "titulo": "Para qué los usamos",
+        "texto": "Únicamente para contactarte sobre tu pedido o tu consulta."
+      },
+      {
+        "titulo": "Con quién los compartimos",
+        "texto": "Con nadie. No vendemos ni compartimos tus datos."
+      },
+      {
+        "titulo": "Tu bolsa de pedido y las cookies",
+        "texto": "La bolsa se guarda solo en tu navegador y contiene únicamente las piezas y las cantidades que elegiste, sin datos personales. Este sitio no usa cookies de rastreo ni herramientas de analítica de terceros."
+      },
+      {
+        "titulo": "Si nos escribes por WhatsApp",
+        "texto": "La conversación ocurre dentro de WhatsApp y se rige por las condiciones y la política de privacidad de esa aplicación."
+      },
+      {
+        "titulo": "Cómo pedir que borremos tus datos",
+        "texto": "Escríbenos a {correo} para pedir que te mostremos, corrijamos o eliminemos tus datos. Lo atenderemos lo antes posible."
+      }
+    ],
+    "cerrar": "Cerrar",
+    "enlace": "Aviso de privacidad"
+  },
+
+  "pie": {
+    "hechoEn": "Hecho a mano en {ciudad}, {estado}",
+    "navegacion": "Secciones",
+    "contacto": "Contacto",
+    "redes": "Síguenos",
+    "derechos": "Todos los derechos reservados."
+  },
+
+  "flotantes": {
+    "etiqueta": "Accesos rápidos",
+    "whatsapp": "Escribir por WhatsApp",
+    "arriba": "Volver arriba"
+  },
+
+  "error404": {
+    "titulo": "Esta página se nos perdió entre las cuentas",
+    "texto": "No encontramos lo que buscabas, pero la colección sigue aquí, esperándote.",
+    "boton": "Volver al inicio"
+  }
+}

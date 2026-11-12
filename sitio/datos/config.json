@@ -1,0 +1,66 @@
+{
+  "_nota": "Único lugar para cambiar el nombre de la marca, los datos de contacto y los ajustes del sitio. Después de editarlo ejecuta: node herramientas/construir.mjs (ver README).",
+
+  "marca": {
+    "nombre": "Collares",
+    "eslogan": "Perlas, piedras y paciencia.",
+    "descripcion": "Joyería hecha a mano en Guadalajara, Jalisco: collares y aretes de perlas y piedras naturales.",
+    "logo": ""
+  },
+
+  "sitio": {
+    "url": "https://castolito.github.io/Collares/",
+    "idioma": "es-MX",
+    "esPrototipo": true,
+    "indexar": true
+  },
+
+  "contacto": {
+    "telefono": "312 XXX XXXX",
+    "correo": "contacto@ejemplo.com",
+    "whatsapp": "+52 312 XXX XXXX",
+    "zona": "Solo en línea",
+    "ciudad": "Guadalajara",
+    "estado": "Jalisco",
+    "pais": "MX",
+    "horario": "Lunes a sábado, de 9:00 a 18:00"
+  },
+
+  "redes": {
+    "instagram": { "usuario": "@collares", "url": "https://instagram.com/collares" },
+    "facebook": { "usuario": "Collares", "url": "https://facebook.com/collares" }
+  },
+
+  "whatsapp": {
+    "mensajeGeneral": "Hola, me interesa un collar",
+    "mensajePedidoDirecto": "Hola, quiero hacer un pedido.",
+    "mensajeProducto": "Hola, me interesa la pieza {nombre} ({categoria}). ¿Me das más información?",
+    "mensajeBolsa": "Hola, quiero hacer este pedido: {piezas}",
+    "mensajeBolsaResto": " y {n} más que te detallo en el chat",
+    "incluirIdEnBolsa": false,
+    "maxCaracteres": 1200
+  },
+
+  "bolsa": {
+    "maxPorPieza": 10,
+    "maxPiezasDistintas": 30,
+    "clave": "collares.bolsa.v1"
+  },
+
+  "catalogo": {
+    "fuente": "json",
+    "ruta": "datos/productos.json",
+    "moneda": "MXN"
+  },
+
+  "formulario": {
+    "modo": "simulado",
+    "endpoint": "api/contacto",
+    "turnstileSiteKey": ""
+  },
+
+  "seguridad": {
+    "contacto": "contacto@ejemplo.com",
+    "expira": "2027-11-12T00:00:00.000Z"
+  }
+}

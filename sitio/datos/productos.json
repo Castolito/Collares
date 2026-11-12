@@ -1,0 +1,414 @@
+{
+  "_nota": "Catálogo de EJEMPLO. Nombres, descripciones, características y fotos son provisionales. El precio va vacío (null) hasta que se defina; cuando pongas un número, la página lo muestra y activa el filtro de precio.",
+  "version": 1,
+
+  "categorias": {
+    "Collares": {
+      "singular": "Collar",
+      "pedir": "Pedir este collar",
+      "mensaje": "Hola, me interesa el collar {nombre}. ¿Me das más información?",
+      "foto": { "base": "ejemplo-collar-perlas", "alt": "Foto de ejemplo: collar de perlas blancas de dos hilos sobre una superficie clara." }
+    },
+    "Aretes": {
+      "singular": "Aretes",
+      "pedir": "Pedir estos aretes",
+      "mensaje": "Hola, me interesan los aretes {nombre}. ¿Me das más información?",
+      "foto": { "base": "ejemplo-aretes-perlas", "alt": "Foto de ejemplo: par de aretes de perla con poste dorado sobre un fondo beige con luz cálida." }
+    }
+  },
+
+  "productos": [
+    {
+      "id": "collar-luna-de-agua",
+      "categoria": "Collares",
+      "nombre": "Luna de Agua",
+      "material": "Perlas",
+      "descripcion": "Dos hilos de perlas de agua dulce que caen con suavidad. Un clásico que acompaña lo mismo unos jeans que un vestido.",
+      "precio": null,
+      "masVendido": true,
+      "fotos": [
+        { "base": "ejemplo-collar-perlas", "alt": "Foto de ejemplo: collar de perlas blancas de dos hilos sobre una superficie clara." },
+        { "base": "ejemplo-portada-perlas-madera", "alt": "Foto de ejemplo: collar de perlas con cadena dorada sobre una base de madera." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de perla", "valor": "Perla de agua dulce" },
+        { "etiqueta": "Largo", "valor": "45 cm" },
+        { "etiqueta": "Cierre", "valor": "Broche de langosta" },
+        { "etiqueta": "Metal", "valor": "Chapa de oro de 14 k" },
+        { "etiqueta": "Peso aproximado", "valor": "34 g" }
+      ]
+    },
+    {
+      "id": "collar-cielo-de-abril",
+      "categoria": "Collares",
+      "nombre": "Cielo de Abril",
+      "material": "Turquesa",
+      "descripcion": "Cuentas de turquesa con vetas naturales y pequeños acentos oscuros. Color de cielo despejado para todos los días.",
+      "precio": null,
+      "masVendido": true,
+      "fotos": [
+        { "base": "ejemplo-collar-turquesa", "alt": "Foto de ejemplo: hilos de cuentas color turquesa con pequeñas cuentas negras sobre tela de lino." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de piedra", "valor": "Turquesa" },
+        { "etiqueta": "Largo", "valor": "48 cm" },
+        { "etiqueta": "Cierre", "valor": "Broche de langosta" },
+        { "etiqueta": "Metal", "valor": "Plata .925" },
+        { "etiqueta": "Peso aproximado", "valor": "52 g" }
+      ]
+    },
+    {
+      "id": "collar-rocio",
+      "categoria": "Collares",
+      "nombre": "Rocío",
+      "material": "Perlas",
+      "descripcion": "Perlas de agua dulce espaciadas sobre una cadena fina, como gotas de rocío. Ligero y fácil de combinar.",
+      "precio": null,
+      "masVendido": false,
+      "fotos": [
+        { "base": "ejemplo-portada-perlas-madera", "alt": "Foto de ejemplo: collar de perlas con cadena dorada sobre una base de madera." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de perla", "valor": "Perla barroca de agua dulce" },
+        { "etiqueta": "Largo", "valor": "40 cm" },
+        { "etiqueta": "Cierre", "valor": "Broche de langosta" },
+        { "etiqueta": "Metal", "valor": "Chapa de oro de 14 k" },
+        { "etiqueta": "Peso aproximado", "valor": "22 g" }
+      ]
+    },
+    {
+      "id": "collar-noche-azul",
+      "categoria": "Collares",
+      "nombre": "Noche Azul",
+      "material": "Lapislázuli",
+      "descripcion": "Lapislázuli de azul profundo con detalles dorados. Sobrio de día, protagonista de noche.",
+      "precio": null,
+      "masVendido": false,
+      "fotos": [
+        { "base": "ejemplo-collar-azul-dorado", "alt": "Foto de ejemplo: collar de cuentas azules y doradas sobre una charola blanca." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de piedra", "valor": "Lapislázuli" },
+        { "etiqueta": "Largo", "valor": "45 cm" },
+        { "etiqueta": "Cierre", "valor": "Broche de langosta" },
+        { "etiqueta": "Metal", "valor": "Chapa de oro de 14 k" },
+        { "etiqueta": "Peso aproximado", "valor": "30 g" }
+      ]
+    },
+    {
+      "id": "collar-atardecer",
+      "categoria": "Collares",
+      "nombre": "Atardecer",
+      "material": "Ojo de tigre",
+      "descripcion": "Ojo de tigre con destellos dorados y cafés que cambian con la luz, como un atardecer.",
+      "precio": null,
+      "masVendido": false,
+      "fotos": [
+        { "base": "ejemplo-collar-tonos-miel", "alt": "Foto de ejemplo: collar de piedras ovaladas en tonos miel y café sobre un fondo blanco." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de piedra", "valor": "Ojo de tigre" },
+        { "etiqueta": "Largo", "valor": "46 cm" },
+        { "etiqueta": "Cierre", "valor": "Broche de langosta" },
+        { "etiqueta": "Metal", "valor": "Chapa de oro de 14 k" },
+        { "etiqueta": "Peso aproximado", "valor": "48 g" }
+      ]
+    },
+    {
+      "id": "collar-alba",
+      "categoria": "Collares",
+      "nombre": "Alba",
+      "material": "Perlas",
+      "descripcion": "Perlas cultivadas de brillo sereno, anudadas una por una. Para quien busca una pieza de toda la vida.",
+      "precio": null,
+      "masVendido": false,
+      "fotos": [
+        { "base": "ejemplo-collar-perlas", "alt": "Foto de ejemplo: collar de perlas blancas de dos hilos sobre una superficie clara." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de perla", "valor": "Perla cultivada" },
+        { "etiqueta": "Largo", "valor": "42 cm" },
+        { "etiqueta": "Cierre", "valor": "Broche de caja" },
+        { "etiqueta": "Metal", "valor": "Plata .925" },
+        { "etiqueta": "Peso aproximado", "valor": "38 g" }
+      ]
+    },
+    {
+      "id": "collar-jacaranda",
+      "categoria": "Collares",
+      "nombre": "Jacaranda",
+      "material": "Amatista",
+      "descripcion": "Amatistas en tonos lila, como las jacarandas en primavera. Un toque de color sereno y elegante.",
+      "precio": null,
+      "masVendido": false,
+      "fotos": [
+        { "base": "ejemplo-collar-azul-dorado", "alt": "Foto de ejemplo: collar de cuentas azules y doradas sobre una charola blanca." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de piedra", "valor": "Amatista" },
+        { "etiqueta": "Largo", "valor": "45 cm" },
+        { "etiqueta": "Cierre", "valor": "Broche de langosta" },
+        { "etiqueta": "Metal", "valor": "Chapa de oro de 14 k" },
+        { "etiqueta": "Peso aproximado", "valor": "40 g" }
+      ]
+    },
+    {
+      "id": "collar-barranca",
+      "categoria": "Collares",
+      "nombre": "Barranca",
+      "material": "Ágata",
+      "descripcion": "Ágatas ovaladas en tonos tierra, cada una con sus propias vetas. Una pieza con presencia.",
+      "precio": null,
+      "masVendido": false,
+      "fotos": [
+        { "base": "ejemplo-collar-tonos-miel", "alt": "Foto de ejemplo: collar de piedras ovaladas en tonos miel y café sobre un fondo blanco." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de piedra", "valor": "Ágata" },
+        { "etiqueta": "Largo", "valor": "50 cm" },
+        { "etiqueta": "Cierre", "valor": "Cierre de gancho" },
+        { "etiqueta": "Metal", "valor": "Latón con baño de oro" },
+        { "etiqueta": "Peso aproximado", "valor": "58 g" }
+      ]
+    },
+    {
+      "id": "collar-bugambilia",
+      "categoria": "Collares",
+      "nombre": "Bugambilia",
+      "material": "Cuarzo rosa",
+      "descripcion": "Cuarzo rosa de tono suave, pulido hasta dejarlo luminoso. Delicado y fácil de llevar.",
+      "precio": null,
+      "masVendido": false,
+      "fotos": [
+        { "base": "ejemplo-collar-tonos-miel", "alt": "Foto de ejemplo: collar de piedras ovaladas en tonos miel y café sobre un fondo blanco." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de piedra", "valor": "Cuarzo rosa" },
+        { "etiqueta": "Largo", "valor": "44 cm" },
+        { "etiqueta": "Cierre", "valor": "Broche de resorte" },
+        { "etiqueta": "Metal", "valor": "Chapa de oro de 14 k" },
+        { "etiqueta": "Peso aproximado", "valor": "36 g" }
+      ]
+    },
+    {
+      "id": "collar-hoja-verde",
+      "categoria": "Collares",
+      "nombre": "Hoja Verde",
+      "material": "Aventurina",
+      "descripcion": "Aventurina verde de brillo discreto. Fresco y natural, para llevarlo a diario.",
+      "precio": null,
+      "masVendido": false,
+      "fotos": [
+        { "base": "ejemplo-collar-turquesa", "alt": "Foto de ejemplo: hilos de cuentas color turquesa con pequeñas cuentas negras sobre tela de lino." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de piedra", "valor": "Aventurina verde" },
+        { "etiqueta": "Largo", "valor": "45 cm" },
+        { "etiqueta": "Cierre", "valor": "Broche de langosta" },
+        { "etiqueta": "Metal", "valor": "Plata .925" },
+        { "etiqueta": "Peso aproximado", "valor": "42 g" }
+      ]
+    },
+
+    {
+      "id": "aretes-gota-de-luna",
+      "categoria": "Aretes",
+      "nombre": "Gota de Luna",
+      "material": "Perlas",
+      "descripcion": "Perlas de agua dulce montadas en poste dorado. Pequeñas, luminosas y para todos los días.",
+      "precio": null,
+      "masVendido": true,
+      "fotos": [
+        { "base": "ejemplo-aretes-perlas", "alt": "Foto de ejemplo: par de aretes de perla con poste dorado sobre un fondo beige con luz cálida." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de perla", "valor": "Perla de agua dulce" },
+        { "etiqueta": "Modelo", "valor": "De botón" },
+        { "etiqueta": "Largo", "valor": "1.6 cm" },
+        { "etiqueta": "Cierre", "valor": "Poste con mariposa" },
+        { "etiqueta": "Metal", "valor": "Chapa de oro de 14 k" },
+        { "etiqueta": "Peso aproximado", "valor": "4 g el par" }
+      ]
+    },
+    {
+      "id": "aretes-lavanda",
+      "categoria": "Aretes",
+      "nombre": "Lavanda",
+      "material": "Amatista",
+      "descripcion": "Amatistas pequeñas en montura dorada. Discretos, con un destello lila.",
+      "precio": null,
+      "masVendido": true,
+      "fotos": [
+        { "base": "ejemplo-aretes-amatista", "alt": "Foto de ejemplo: par de aretes dorados con piedras moradas sobre una tela blanca." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de piedra", "valor": "Amatista" },
+        { "etiqueta": "Modelo", "valor": "De gancho" },
+        { "etiqueta": "Largo", "valor": "2 cm" },
+        { "etiqueta": "Cierre", "valor": "Gancho con seguro" },
+        { "etiqueta": "Metal", "valor": "Chapa de oro de 14 k" },
+        { "etiqueta": "Peso aproximado", "valor": "4 g el par" }
+      ]
+    },
+    {
+      "id": "aretes-brote",
+      "categoria": "Aretes",
+      "nombre": "Brote",
+      "material": "Aventurina",
+      "descripcion": "Aventurina verde suspendida en un aro dorado en forma de gota. Frescos y ligeros.",
+      "precio": null,
+      "masVendido": false,
+      "fotos": [
+        { "base": "ejemplo-aretes-verdes", "alt": "Foto de ejemplo: par de aretes dorados en forma de gota con piedras verdes, sobre una piedra rosada." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de piedra", "valor": "Aventurina verde" },
+        { "etiqueta": "Modelo", "valor": "De gancho" },
+        { "etiqueta": "Largo", "valor": "3.5 cm" },
+        { "etiqueta": "Cierre", "valor": "Gancho" },
+        { "etiqueta": "Metal", "valor": "Chapa de oro de 14 k" },
+        { "etiqueta": "Peso aproximado", "valor": "5 g el par" }
+      ]
+    },
+    {
+      "id": "aretes-brisa",
+      "categoria": "Aretes",
+      "nombre": "Brisa",
+      "material": "Perlas",
+      "descripcion": "Una perla cultivada que se mece ligera en su gancho. Sencillos, con movimiento.",
+      "precio": null,
+      "masVendido": false,
+      "fotos": [
+        { "base": "ejemplo-aretes-perlas", "alt": "Foto de ejemplo: par de aretes de perla con poste dorado sobre un fondo beige con luz cálida." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de perla", "valor": "Perla cultivada" },
+        { "etiqueta": "Modelo", "valor": "De gancho" },
+        { "etiqueta": "Largo", "valor": "3 cm" },
+        { "etiqueta": "Cierre", "valor": "Gancho" },
+        { "etiqueta": "Metal", "valor": "Plata .925" },
+        { "etiqueta": "Peso aproximado", "valor": "5 g el par" }
+      ]
+    },
+    {
+      "id": "aretes-petalo",
+      "categoria": "Aretes",
+      "nombre": "Pétalo",
+      "material": "Cuarzo rosa",
+      "descripcion": "Cuarzo rosa en botón, de tono suave. Pequeños y delicados.",
+      "precio": null,
+      "masVendido": false,
+      "fotos": [
+        { "base": "ejemplo-aretes-piedras", "alt": "Foto de ejemplo: par de aretes largos con piedras rosas, moradas, verdes y amarillas sobre un fondo blanco." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de piedra", "valor": "Cuarzo rosa" },
+        { "etiqueta": "Modelo", "valor": "De botón" },
+        { "etiqueta": "Largo", "valor": "1.2 cm" },
+        { "etiqueta": "Cierre", "valor": "Poste con mariposa" },
+        { "etiqueta": "Metal", "valor": "Plata .925" },
+        { "etiqueta": "Peso aproximado", "valor": "3 g el par" }
+      ]
+    },
+    {
+      "id": "aretes-cenote",
+      "categoria": "Aretes",
+      "nombre": "Cenote",
+      "material": "Turquesa",
+      "descripcion": "Turquesa de azul verdoso en forma de gota. Un acento de color que ilumina el rostro.",
+      "precio": null,
+      "masVendido": false,
+      "fotos": [
+        { "base": "ejemplo-aretes-verdes", "alt": "Foto de ejemplo: par de aretes dorados en forma de gota con piedras verdes, sobre una piedra rosada." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de piedra", "valor": "Turquesa" },
+        { "etiqueta": "Modelo", "valor": "De gancho" },
+        { "etiqueta": "Largo", "valor": "3.5 cm" },
+        { "etiqueta": "Cierre", "valor": "Gancho" },
+        { "etiqueta": "Metal", "valor": "Plata .925" },
+        { "etiqueta": "Peso aproximado", "valor": "6 g el par" }
+      ]
+    },
+    {
+      "id": "aretes-lluvia",
+      "categoria": "Aretes",
+      "nombre": "Lluvia",
+      "material": "Perlas",
+      "descripcion": "Pequeñas perlas en cascada sobre una cadena fina. Largos, ligeros y con una caída elegante.",
+      "precio": null,
+      "masVendido": false,
+      "fotos": [
+        { "base": "ejemplo-aretes-perlas", "alt": "Foto de ejemplo: par de aretes de perla con poste dorado sobre un fondo beige con luz cálida." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de perla", "valor": "Perla de agua dulce" },
+        { "etiqueta": "Modelo", "valor": "Largos" },
+        { "etiqueta": "Largo", "valor": "6 cm" },
+        { "etiqueta": "Cierre", "valor": "Gancho" },
+        { "etiqueta": "Metal", "valor": "Chapa de oro de 14 k" },
+        { "etiqueta": "Peso aproximado", "valor": "7 g el par" }
+      ]
+    },
+    {
+      "id": "aretes-medianoche",
+      "categoria": "Aretes",
+      "nombre": "Medianoche",
+      "material": "Lapislázuli",
+      "descripcion": "Lapislázuli de azul profundo en una caída larga. Para las ocasiones especiales.",
+      "precio": null,
+      "masVendido": false,
+      "fotos": [
+        { "base": "ejemplo-aretes-piedras", "alt": "Foto de ejemplo: par de aretes largos con piedras rosas, moradas, verdes y amarillas sobre un fondo blanco." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de piedra", "valor": "Lapislázuli" },
+        { "etiqueta": "Modelo", "valor": "Largos" },
+        { "etiqueta": "Largo", "valor": "5.5 cm" },
+        { "etiqueta": "Cierre", "valor": "Gancho" },
+        { "etiqueta": "Metal", "valor": "Chapa de oro de 14 k" },
+        { "etiqueta": "Peso aproximado", "valor": "8 g el par" }
+      ]
+    },
+    {
+      "id": "aretes-miel",
+      "categoria": "Aretes",
+      "nombre": "Miel",
+      "material": "Ojo de tigre",
+      "descripcion": "Ojo de tigre en tono miel, con destellos que cambian con la luz. Pequeños y versátiles.",
+      "precio": null,
+      "masVendido": false,
+      "fotos": [
+        { "base": "ejemplo-aretes-piedras", "alt": "Foto de ejemplo: par de aretes largos con piedras rosas, moradas, verdes y amarillas sobre un fondo blanco." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de piedra", "valor": "Ojo de tigre" },
+        { "etiqueta": "Modelo", "valor": "Pequeños, de botón" },
+        { "etiqueta": "Largo", "valor": "1 cm" },
+        { "etiqueta": "Cierre", "valor": "Poste con mariposa" },
+        { "etiqueta": "Metal", "valor": "Chapa de oro de 14 k" },
+        { "etiqueta": "Peso aproximado", "valor": "3 g el par" }
+      ]
+    },
+    {
+      "id": "aretes-arena",
+      "categoria": "Aretes",
+      "nombre": "Arena",
+      "material": "Ágata",
+      "descripcion": "Ágata en tonos arena, con vetas naturales. Cálidos y fáciles de combinar.",
+      "precio": null,
+      "masVendido": false,
+      "fotos": [
+        { "base": "ejemplo-aretes-amatista", "alt": "Foto de ejemplo: par de aretes dorados con piedras moradas sobre una tela blanca." }
+      ],
+      "caracteristicas": [
+        { "etiqueta": "Tipo de piedra", "valor": "Ágata" },
+        { "etiqueta": "Modelo", "valor": "De gancho" },
+        { "etiqueta": "Largo", "valor": "4 cm" },
+        { "etiqueta": "Cierre", "valor": "Gancho" },
+        { "etiqueta": "Metal", "valor": "Latón con baño de oro" },
+        { "etiqueta": "Peso aproximado", "valor": "7 g el par" }
+      ]
+    }
+  ]
+}

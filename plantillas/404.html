@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="{{idioma}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+  <meta http-equiv="Content-Security-Policy" content="{{csp}}">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>{{t.error404.titulo}} · {{marca}}</title>
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#FAF4EA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1F1611" media="(prefers-color-scheme: dark)">
+  <link rel="preload" href="{{base}}assets/fuentes/fraunces-latin-full-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{base}}{{vendor}}/bootstrap.min.css" integrity="{{sriCss}}">
+  <link rel="stylesheet" href="{{base}}assets/css/estilos.css">
+  <link rel="icon" href="{{base}}favicon.ico" sizes="32x32">
+  <link rel="icon" href="{{base}}assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body class="pagina-404">
+  <header class="encabezado">
+    <div class="container-xxl encabezado__barra">
+      <a class="marca" href="{{base}}" aria-label="{{irInicio}}">{{{logo}}}</a>
+    </div>
+  </header>
+
+  <main class="error-404" id="contenido">
+    <div class="container-xxl error-404__contenido">
+      <p class="antetitulo">Error 404</p>
+      <h1 class="error-404__titulo">{{t.error404.titulo}}</h1>
+      <svg class="ornamento" aria-hidden="true" focusable="false"><use href="{{base}}assets/iconos/iconos.svg#i-ornamento"></use></svg>
+      <p class="error-404__texto">{{t.error404.texto}}</p>
+      <a class="btn btn-acento btn-lg" href="{{base}}">{{t.error404.boton}}</a>
+    </div>
+  </main>
+
+  <footer class="pie pie--simple">
+    <div class="container-xxl pie__legal">
+      <p>© {{anio}} {{marca}}. {{t.pie.hechoEn}}.</p>
+    </div>
+  </footer>
+</body>
+</html>

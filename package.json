@@ -1,0 +1,11 @@
+{
+  "name": "collares-landing",
+  "private": true,
+  "description": "Landing page estática de joyería hecha a mano. Sin dependencias: este archivo solo declara que el código usa módulos ES y da atajos para las herramientas.",
+  "type": "module",
+  "scripts": {
+    "construir": "node herramientas/construir.mjs",
+    "servir": "node herramientas/servidor.mjs",
+    "probar": "node --test pruebas/unitarias.mjs pruebas/servidor.mjs"
+  }
+}

@@ -1,0 +1,6 @@
+node_modules/
+pruebas/capturas/
+pruebas/informes/
+fotos-originales/
+.dev.vars
+.wrangler/

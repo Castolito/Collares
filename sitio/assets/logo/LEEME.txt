@@ -1,0 +1,5 @@
+Aquí va el archivo del logo cuando exista (de preferencia SVG; también sirve PNG).
+1. Copia el archivo en esta carpeta, por ejemplo: logo.svg
+2. En sitio/datos/config.json escribe su nombre en "marca" > "logo": "logo.svg"
+3. Ejecuta: node herramientas/construir.mjs
+Mientras "logo" esté vacío, la página muestra el nombre de la marca como logotipo provisional.

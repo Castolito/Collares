@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "sitio", "runtimeExecutable": "node", "runtimeArgs": ["herramientas/servidor.mjs"], "port": 4173 }
+  ]
+}

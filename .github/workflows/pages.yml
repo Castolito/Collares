@@ -1,0 +1,52 @@
+# Publica el prototipo en GitHub Pages cada vez que se sube un cambio a la rama principal.
+# Requisito (una sola vez): en GitHub, Settings > Pages > Source: "GitHub Actions".
+name: Publicar en GitHub Pages
+
+on:
+  push:
+    branches: [master, main]
+  workflow_dispatch:
+
+# Permisos mínimos: leer el código y publicar en Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  construir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - id: pages
+        uses: actions/configure-pages@v6
+      - name: Probar la lógica (WhatsApp, bolsa, filtros, formulario, servidor)
+        run: node --test pruebas/unitarias.mjs pruebas/servidor.mjs
+      - name: Construir el sitio con la dirección real de GitHub Pages
+        run: node herramientas/construir.mjs
+        env:
+          URL_SITIO: ${{ steps.pages.outputs.base_url }}/
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: sitio
+          # Necesario para publicar .well-known/security.txt
+          include-hidden-files: true
+
+  publicar:
+    needs: construir
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.despliegue.outputs.page_url }}
+    steps:
+      - id: despliegue
+        uses: actions/deploy-pages@v5

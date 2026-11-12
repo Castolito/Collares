@@ -1,0 +1,23 @@
+{
+  "name": "Collares",
+  "short_name": "Collares",
+  "description": "Joyería hecha a mano en Guadalajara, Jalisco: collares y aretes de perlas y piedras naturales.",
+  "lang": "es-MX",
+  "start_url": "./",
+  "scope": "./",
+  "display": "browser",
+  "background_color": "#FAF4EA",
+  "theme_color": "#7A4B2A",
+  "icons": [
+    {
+      "src": "assets/img/icono-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/icono-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

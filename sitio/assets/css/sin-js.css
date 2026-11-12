@@ -1,0 +1,12 @@
+/* Solo se carga cuando el navegador tiene JavaScript desactivado.
+   Oculta lo que no puede funcionar y deja a la vista todo el contenido. */
+.solo-js { display: none !important; }
+.menu-movil.collapse { display: block; }
+.accordion-collapse.collapse { display: block; }
+.pregunta__flecha { display: none; }
+
+/* El aviso de privacidad deja de ser una ventana y se muestra como una sección más. */
+#aviso-privacidad.modal { position: static; display: block; height: auto; overflow: visible; opacity: 1; padding: 3rem 0; background: var(--c-secundario); }
+#aviso-privacidad .modal-dialog { max-width: 46rem; height: auto; margin: 0 auto; padding: 0 1rem; transform: none; pointer-events: auto; }
+#aviso-privacidad .modal-content { max-height: none; }
+#aviso-privacidad .modal-body { overflow: visible; }

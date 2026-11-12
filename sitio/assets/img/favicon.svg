@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Icono provisional: un collar dorado con una perla sobre fondo cobre. Se sustituye cuando exista el logo. -->
+  <rect width="64" height="64" rx="14" fill="#7A4B2A"/>
+  <path d="M14 17c0 17 8 27 18 27s18-10 18-27" fill="none" stroke="#C9A24D" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="32" cy="46" r="7.5" fill="#FAF4EA"/>
+</svg>

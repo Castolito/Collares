@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="{{idioma}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+  <!-- Seguridad: solo se permite cargar recursos de este mismo sitio; nada en línea, nada externo. -->
+  <meta http-equiv="Content-Security-Policy" content="{{csp}}">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>{{t.meta.titulo}}</title>
+  <meta name="description" content="{{t.meta.descripcion}}">
+  <meta name="robots" content="{{robots}}">
+  <link rel="canonical" href="{{url}}">
+  <meta name="geo.region" content="MX-JAL">
+  <meta name="geo.placename" content="{{c.contacto.ciudad}}, {{c.contacto.estado}}">
+
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#FAF4EA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1F1611" media="(prefers-color-scheme: dark)">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="{{marca}}">
+  <meta property="og:title" content="{{t.meta.titulo}}">
+  <meta property="og:description" content="{{t.meta.descripcion}}">
+  <meta property="og:url" content="{{url}}">
+  <meta property="og:image" content="{{urlImagen}}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{t.meta.altCompartir}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{t.meta.titulo}}">
+  <meta name="twitter:description" content="{{t.meta.descripcion}}">
+  <meta name="twitter:image" content="{{urlImagen}}">
+  <meta name="twitter:image:alt" content="{{t.meta.altCompartir}}">
+
+  <link rel="preload" href="assets/fuentes/fraunces-latin-full-normal.woff2" as="font" type="font/woff2" crossorigin>
+  {{{preloadHero}}}
+
+  <link rel="stylesheet" href="{{vendor}}/bootstrap.min.css" integrity="{{sriCss}}">
+  <link rel="stylesheet" href="assets/css/estilos.css">
+  <noscript><link rel="stylesheet" href="assets/css/sin-js.css"></noscript>
+
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <script type="module" src="assets/js/principal.js"></script>
+
+  {{{jsonLd}}}
+</head>
+<body>
+  <a class="saltar" href="#contenido">{{t.saltar}}</a>
+  {{{avisoPrototipo}}}
+
+  <!-- ===== Encabezado ===== -->
+  <header class="encabezado" data-encabezado>
+    <div class="container-xxl encabezado__barra">
+      <a class="marca" href="#inicio" aria-label="{{irInicio}}">{{{logo}}}</a>
+
+      <nav class="encabezado__nav" aria-label="{{t.navegacion.etiqueta}}">
+        <ul class="encabezado__enlaces">
+          {{{navEscritorio}}}
+        </ul>
+      </nav>
+
+      <div class="encabezado__acciones">
+        <button class="btn-icono solo-js" type="button" data-buscador-abrir aria-expanded="false" aria-controls="buscador" aria-label="{{t.buscador.abrir}}">{{{icono.lupa}}}</button>
+        {{{botonPedidoBarra}}}
+        <button class="btn-icono bolsa-boton solo-js" type="button" data-bs-toggle="offcanvas" data-bs-target="#bolsa" aria-controls="bolsa" aria-label="{{t.bolsa.abrirVacia}}" data-bolsa-boton>{{{icono.bolsa}}}<span class="bolsa-boton__contador" data-bolsa-contador aria-hidden="true" hidden>0</span></button>
+        <button class="btn-icono encabezado__menu solo-js" type="button" data-bs-toggle="collapse" data-bs-target="#menu-movil" aria-controls="menu-movil" aria-expanded="false" aria-label="{{t.navegacion.abrirMenu}}">{{{icono.menu}}}</button>
+      </div>
+    </div>
+
+    <nav class="collapse menu-movil" id="menu-movil" aria-label="{{t.navegacion.etiqueta}}">
+      <div class="container-xxl menu-movil__contenido">
+        <ul class="menu-movil__enlaces">
+          {{{navMovil}}}
+        </ul>
+        {{{botonPedidoMenu}}}
+      </div>
+    </nav>
+
+    <div class="buscador solo-js" id="buscador" hidden>
+      <div class="container-xxl buscador__contenido">
+        <div class="buscador__campo">
+          {{{icono.lupa}}}
+          <label class="visually-hidden" for="buscador-campo">{{t.buscador.etiqueta}}</label>
+          <input class="buscador__entrada" id="buscador-campo" type="search" role="combobox" aria-expanded="false" aria-controls="buscador-resultados" aria-autocomplete="list" aria-describedby="buscador-ayuda" autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="search" maxlength="60" placeholder="{{t.buscador.ejemplo}}">
+          <button class="btn-icono" type="button" data-buscador-cerrar aria-label="{{t.buscador.cerrar}}">{{{icono.cerrar}}}</button>
+        </div>
+        <p class="visually-hidden" id="buscador-ayuda">{{t.buscador.ayuda}}</p>
+        <ul class="buscador__resultados" id="buscador-resultados" role="listbox" aria-label="{{t.buscador.etiqueta}}" hidden></ul>
+        <p class="buscador__estado" role="status" data-buscador-estado></p>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+
+    <!-- ===== Inicio (hero) ===== -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <div class="container-xxl hero__rejilla">
+        <div class="hero__texto">
+          <p class="antetitulo">{{t.hero.antetitulo}}</p>
+          <h1 class="hero__titulo" id="hero-titulo">{{t.hero.titulo}} <span class="hero__acento">{{t.hero.tituloAcento}}</span></h1>
+          <p class="hero__eslogan">{{eslogan}}</p>
+          <p class="hero__apoyo">{{t.hero.apoyo}}</p>
+          <div class="hero__botones">
+            <a class="btn btn-acento btn-lg" href="#coleccion">{{t.hero.botonColeccion}}</a>
+            {{{heroBotonWhatsApp}}}
+          </div>
+          <ul class="hero__datos">{{{heroDatos}}}</ul>
+        </div>
+        <div class="hero__foto">
+          <div class="arco">{{{heroImagen}}}</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Compra por categoría (se llena desde productos.json) ===== -->
+    <section class="seccion seccion--arena solo-js" id="categorias" aria-labelledby="categorias-titulo">
+      <div class="container-xxl">
+        <header class="seccion__cabecera" data-revelar>
+          <h2 class="seccion__titulo" id="categorias-titulo">{{t.categorias.titulo}}</h2>
+          <p class="seccion__apoyo">{{t.categorias.apoyo}}</p>
+        </header>
+        <ul class="categorias" data-categorias>
+          {{{esqueletoCategorias}}}
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Los más vendidos (solo aparece si hay productos con masVendido) ===== -->
+    <section class="seccion solo-js" id="mas-vendidos" aria-labelledby="vendidos-titulo" data-vendidos{{{vendidosOculto}}}>
+      <div class="container-xxl">
+        <header class="seccion__cabecera" data-revelar>
+          <h2 class="seccion__titulo" id="vendidos-titulo">{{t.masVendidos.titulo}}</h2>
+          <p class="seccion__apoyo">{{t.masVendidos.apoyo}}</p>
+        </header>
+        <ul class="vendidos" data-vendidos-lista>
+          {{{esqueletoVendidos}}}
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Colección ===== -->
+    <section class="seccion seccion--arena" id="coleccion" aria-labelledby="coleccion-titulo">
+      <div class="container-xxl">
+        <header class="seccion__cabecera" data-revelar>
+          <h2 class="seccion__titulo" id="coleccion-titulo">{{t.coleccion.titulo}}</h2>
+          <p class="seccion__apoyo">{{t.coleccion.apoyo}}</p>
+        </header>
+
+        <noscript>
+          <div class="aviso">
+            <p>{{t.coleccion.sinJs}}</p>
+            {{{sinJsColeccion}}}
+          </div>
+        </noscript>
+
+        <div class="coleccion solo-js" data-coleccion>
+          <form class="filtros" data-filtros aria-labelledby="coleccion-titulo" novalidate>
+            <div class="filtros__principal">
+              <fieldset class="filtros__grupo filtros__grupo--categorias">
+                <legend class="visually-hidden">{{t.filtros.categoria}}</legend>
+                <div class="segmentos" data-filtro-categorias></div>
+              </fieldset>
+
+              <div class="filtros__buscar">
+                <label class="visually-hidden" for="filtro-texto">{{t.filtros.buscar}}</label>
+                {{{icono.lupa}}}
+                <input class="filtros__entrada" id="filtro-texto" type="search" autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="search" maxlength="60" placeholder="{{t.filtros.buscarEjemplo}}" data-filtro-texto>
+              </div>
+
+              <button class="btn btn-contorno filtros__alternar" type="button" data-bs-toggle="collapse" data-bs-target="#filtros-panel" aria-expanded="false" aria-controls="filtros-panel">{{{icono.filtro}}}<span>{{t.filtros.boton}}</span><span class="filtros__cuenta" data-filtros-cuenta hidden></span></button>
+            </div>
+
+            <div class="collapse filtros__panel" id="filtros-panel">
+              <fieldset class="filtros__grupo">
+                <legend class="filtros__leyenda">{{t.filtros.material}}</legend>
+                <div class="casillas" data-filtro-materiales></div>
+              </fieldset>
+
+              <fieldset class="filtros__grupo filtros__grupo--precio" data-filtro-precio hidden disabled>
+                <legend class="filtros__leyenda">{{t.filtros.precio}}</legend>
+                <div class="precio">
+                  <label class="precio__campo"><span>{{t.filtros.precioMin}}</span><input class="form-control" type="number" inputmode="numeric" min="0" step="1" data-precio-min></label>
+                  <label class="precio__campo"><span>{{t.filtros.precioMax}}</span><input class="form-control" type="number" inputmode="numeric" min="0" step="1" data-precio-max></label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="filtros__estado">
+              <p class="filtros__resultado" role="status" data-filtros-resultado></p>
+              <ul class="filtros__activos" aria-label="{{t.filtros.activos}}" data-filtros-activos hidden></ul>
+              <button class="btn-enlace" type="button" data-filtros-limpiar hidden>{{t.filtros.limpiar}}</button>
+            </div>
+          </form>
+
+          <ul class="rejilla" data-rejilla>
+          {{{esqueletoRejilla}}}
+          </ul>
+
+          <div class="vacio" data-vacio hidden>
+            {{{icono.lupa}}}
+            <p class="vacio__titulo">{{t.filtros.vacioTitulo}}</p>
+            <p>{{t.filtros.vacioTexto}}</p>
+            <button class="btn btn-contorno" type="button" data-filtros-limpiar>{{t.filtros.limpiar}}</button>
+          </div>
+
+          <div class="aviso" data-error-catalogo hidden>
+            <p>{{t.coleccion.errorCarga}}</p>
+            <button class="btn btn-contorno" type="button" data-reintentar>{{t.coleccion.reintentar}}</button>
+          </div>
+
+          {{{notaFotos}}}
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Sobre nosotros ===== -->
+    <section class="seccion" id="nosotros" aria-labelledby="nosotros-titulo">
+      <div class="container-xxl nosotros">
+        <div class="nosotros__foto" data-revelar>{{{nosotrosImagen}}}</div>
+        <div class="nosotros__texto" data-revelar>
+          <h2 class="seccion__titulo" id="nosotros-titulo">{{t.nosotros.titulo}}</h2>
+          {{{nosotrosParrafos}}}
+          <ul class="valores">
+            {{{valores}}}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Cómo pedir ===== -->
+    <section class="seccion seccion--arena" id="como-pedir" aria-labelledby="pedir-titulo">
+      <div class="container-xxl">
+        <header class="seccion__cabecera" data-revelar>
+          <h2 class="seccion__titulo" id="pedir-titulo">{{t.comoPedir.titulo}}</h2>
+          <p class="seccion__apoyo">{{t.comoPedir.apoyo}}</p>
+        </header>
+        <ol class="pasos" data-escalonar>
+          {{{pasos}}}
+        </ol>
+        <div class="pasos__cierre" data-revelar>
+          <p>{{t.comoPedir.nota}}</p>
+          <a class="btn btn-acento btn-lg" href="#coleccion">{{t.comoPedir.boton}}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Preguntas frecuentes ===== -->
+    <section class="seccion" id="preguntas" aria-labelledby="preguntas-titulo">
+      <div class="container-xxl seccion--estrecha">
+        <header class="seccion__cabecera" data-revelar>
+          <h2 class="seccion__titulo" id="preguntas-titulo">{{t.preguntas.titulo}}</h2>
+          <p class="seccion__apoyo">{{t.preguntas.apoyo}}</p>
+        </header>
+        <div class="accordion preguntas" data-revelar>
+          {{{preguntas}}}
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section class="seccion seccion--arena" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="container-xxl">
+        <header class="seccion__cabecera" data-revelar>
+          <h2 class="seccion__titulo" id="contacto-titulo">{{t.contacto.titulo}}</h2>
+          <p class="seccion__apoyo">{{t.contacto.apoyo}}</p>
+        </header>
+
+        <div class="contacto">
+          <div class="contacto__datos" data-revelar>
+            {{{contactoBoton}}}
+            <dl class="datos">
+            {{{contactoDatos}}}
+            </dl>
+            <h3 class="contacto__subtitulo">{{t.contacto.etiquetas.redes}}</h3>
+            <ul class="redes">
+            {{{redes}}}
+            </ul>
+          </div>
+
+          <div class="contacto__formulario" data-revelar>
+            <h3 class="contacto__titulo-formulario">{{t.formulario.titulo}}</h3>
+            <p>{{t.formulario.apoyo}}</p>
+            {{{formularioAviso}}}
+            <noscript><p class="aviso">{{t.formulario.sinJs}}</p></noscript>
+
+            <form class="formulario solo-js" action="{{c.formulario.endpoint}}" method="post" novalidate data-formulario>
+              <div class="formulario__resumen" role="alert" tabindex="-1" data-form-resumen hidden>
+                <p>{{t.formulario.resumenErrores}}</p>
+                <ul></ul>
+              </div>
+              <p class="formulario__leyenda"><span aria-hidden="true">*</span> {{t.formulario.leyenda}}</p>
+
+              <div class="campo">
+                <label class="form-label" for="campo-nombre">{{t.formulario.nombre}} <span class="campo__marca" aria-hidden="true">*</span></label>
+                <input class="form-control" id="campo-nombre" name="nombre" type="text" autocomplete="name" required maxlength="120" aria-describedby="error-nombre">
+                <p class="campo__error" id="error-nombre" data-error="nombre" hidden></p>
+              </div>
+
+              <div class="formulario__par">
+                <div class="campo">
+                  <label class="form-label" for="campo-correo">{{t.formulario.correo}} <span class="campo__marca" aria-hidden="true">*</span></label>
+                  <input class="form-control" id="campo-correo" name="correo" type="email" inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" required maxlength="{{maxCorreo}}" aria-describedby="error-correo">
+                  <p class="campo__error" id="error-correo" data-error="correo" hidden></p>
+                </div>
+                <div class="campo">
+                  <label class="form-label" for="campo-telefono">{{t.formulario.telefono}} <span class="campo__marca" aria-hidden="true">*</span></label>
+                  <input class="form-control" id="campo-telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required maxlength="24" aria-describedby="ayuda-telefono error-telefono">
+                  <p class="campo__ayuda" id="ayuda-telefono">{{t.formulario.telefonoAyuda}}</p>
+                  <p class="campo__error" id="error-telefono" data-error="telefono" hidden></p>
+                </div>
+              </div>
+
+              <fieldset class="campo campo--grupo">
+                <legend class="form-label">{{t.formulario.medio}} <span class="campo__marca" aria-hidden="true">*</span></legend>
+                <div class="campo__opciones">
+                  {{{formularioMedios}}}
+                </div>
+                <p class="campo__error" id="error-medio" data-error="medio" hidden></p>
+              </fieldset>
+
+              <div class="campo">
+                <label class="form-label" for="campo-producto">{{t.formulario.producto}} <span class="campo__opcional">({{t.formulario.opcional}})</span></label>
+                <select class="form-select" id="campo-producto" name="producto" aria-describedby="error-producto">
+                  <option value="">{{t.formulario.productoNinguna}}</option>
+                </select>
+                <p class="campo__error" id="error-producto" data-error="producto" hidden></p>
+              </div>
+
+              <div class="campo">
+                <label class="form-label" for="campo-mensaje">{{t.formulario.mensaje}} <span class="campo__opcional">({{t.formulario.opcional}})</span></label>
+                <textarea class="form-control" id="campo-mensaje" name="mensaje" rows="4" maxlength="{{maxMensaje}}" aria-describedby="ayuda-mensaje error-mensaje"></textarea>
+                <p class="campo__ayuda" id="ayuda-mensaje">{{{formularioAyudaMensaje}}}</p>
+                <p class="campo__error" id="error-mensaje" data-error="mensaje" hidden></p>
+              </div>
+
+              <!-- Campo trampa contra bots: las personas no lo ven ni llegan a él con el teclado. -->
+              <div class="trampa" aria-hidden="true">
+                <label for="campo-trampa">No llenes este campo</label>
+                <input id="campo-trampa" name="{{campoTrampa}}" type="text" tabindex="-1" autocomplete="off">
+              </div>
+
+              <!-- Aquí se mostrará Cloudflare Turnstile en la versión final (ver README). -->
+              <div data-turnstile hidden></div>
+
+              <div class="campo campo--consentimiento">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="campo-consentimiento" name="consentimiento" required aria-describedby="error-consentimiento">
+                  <label class="form-check-label" for="campo-consentimiento">{{t.formulario.consentimiento}} <span class="campo__marca" aria-hidden="true">*</span></label>
+                </div>
+                <a class="enlace" href="#aviso-privacidad" data-bs-toggle="modal" data-bs-target="#aviso-privacidad" aria-haspopup="dialog">{{t.formulario.leerAviso}}</a>
+                <p class="campo__error" id="error-consentimiento" data-error="consentimiento" hidden></p>
+              </div>
+
+              <button class="btn btn-contorno btn-lg formulario__enviar" type="submit" data-form-enviar>{{t.formulario.enviar}}</button>
+            </form>
+
+            <div class="formulario__exito" tabindex="-1" data-form-exito hidden>
+              <svg class="exito__marca" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle class="exito__circulo" cx="24" cy="24" r="21"/><path class="exito__palomita" d="m15 24.5 6.5 6.5L34 18" pathLength="1"/></svg>
+              <p class="etiqueta" data-form-simulacion hidden>{{t.formulario.exitoSimuladoEtiqueta}}</p>
+              <h4 class="exito__titulo" data-form-exito-titulo></h4>
+              <p data-form-exito-texto></p>
+              <p class="exito__nota" data-form-exito-nota hidden>{{t.formulario.exitoSimulado}}</p>
+              <button class="btn btn-contorno" type="button" data-form-otro>{{t.formulario.otroMensaje}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Pie de página ===== -->
+  <footer class="pie">
+    <div class="container-xxl pie__rejilla">
+      <div class="pie__marca">
+        <p class="marca marca--pie">{{{logo}}}</p>
+        <p class="pie__eslogan">{{eslogan}}</p>
+        <p>{{t.pie.hechoEn}}</p>
+      </div>
+      <nav aria-label="{{t.pie.navegacion}}">
+        <h2 class="pie__titulo">{{t.pie.navegacion}}</h2>
+        <ul class="pie__lista">
+          {{{navPie}}}
+        </ul>
+      </nav>
+      <div>
+        <h2 class="pie__titulo">{{t.pie.contacto}}</h2>
+        <ul class="pie__lista">
+            {{{pieContacto}}}
+        </ul>
+      </div>
+      <div>
+        <h2 class="pie__titulo">{{t.pie.redes}}</h2>
+        <ul class="redes redes--pie">
+            {{{redes}}}
+        </ul>
+      </div>
+    </div>
+    <div class="container-xxl pie__legal">
+      <p>© <span data-anio>{{anio}}</span> {{marca}}. {{t.pie.derechos}}</p>
+      <a class="pie__enlace" href="#aviso-privacidad" data-bs-toggle="modal" data-bs-target="#aviso-privacidad" aria-haspopup="dialog">{{t.privacidad.enlace}}</a>
+    </div>
+  </footer>
+
+  <!-- ===== Botones flotantes ===== -->
+  <aside class="flotantes" aria-label="{{t.flotantes.etiqueta}}">
+    <button class="flotante flotante--arriba solo-js" type="button" aria-label="{{t.flotantes.arriba}}" data-arriba hidden>{{{icono.flecha-arriba}}}</button>
+    {{{flotanteWhatsApp}}}
+  </aside>
+
+  <!-- ===== Bolsa de pedido (panel lateral) ===== -->
+  <div class="offcanvas offcanvas-end bolsa" tabindex="-1" id="bolsa" aria-labelledby="bolsa-titulo">
+    <div class="bolsa__cabecera">
+      <h2 class="bolsa__titulo" id="bolsa-titulo">{{t.bolsa.titulo}}</h2>
+      <button class="btn-icono" type="button" data-bs-dismiss="offcanvas" aria-label="{{t.bolsa.cerrar}}">{{{icono.cerrar}}}</button>
+    </div>
+    <div class="bolsa__cuerpo">
+      <div class="bolsa__vacia" data-bolsa-vacia>
+        {{{icono.bolsa}}}
+        <p class="bolsa__vacia-titulo">{{t.bolsa.vacioTitulo}}</p>
+        <p>{{t.bolsa.vacioTexto}}</p>
+        <button class="btn btn-contorno" type="button" data-bolsa-coleccion>{{t.bolsa.verColeccion}}</button>
+      </div>
+      <ul class="bolsa__lista" data-bolsa-lista></ul>
+      <p class="bolsa__aviso" role="status" data-bolsa-aviso hidden></p>
+    </div>
+    <div class="bolsa__pie" data-bolsa-pie hidden>
+      <p class="bolsa__total" data-bolsa-total></p>
+      <a class="btn btn-acento btn-lg bolsa__enviar" href="#coleccion" target="_blank" rel="noopener noreferrer" data-bolsa-enviar>{{{icono.whatsapp}}}<span>{{t.bolsa.enviar}}</span><span class="visually-hidden"> ({{t.nuevaPestana}})</span></a>
+      <p class="bolsa__nota">{{t.bolsa.nota}}</p>
+      <div class="bolsa__vaciar">
+        <button class="btn-enlace" type="button" data-bolsa-vaciar>{{t.bolsa.vaciar}}</button>
+        <div class="bolsa__confirmar" data-bolsa-confirmar hidden>
+          <span>{{t.bolsa.confirmarVaciar}}</span>
+          <button class="btn btn-contorno btn-sm" type="button" data-bolsa-si>{{t.bolsa.siVaciar}}</button>
+          <button class="btn-enlace" type="button" data-bolsa-no>{{t.bolsa.cancelar}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Detalle de una pieza (ventana) ===== -->
+  <div class="modal fade detalle" id="detalle" tabindex="-1" aria-labelledby="detalle-titulo">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-fullscreen-md-down">
+      <div class="modal-content">
+        <button class="btn-icono detalle__cerrar" type="button" data-bs-dismiss="modal" aria-label="{{t.pieza.cerrar}}">{{{icono.cerrar}}}</button>
+        <div class="modal-body detalle__cuerpo">
+          <div class="detalle__galeria">
+            <div class="detalle__foto"></div>
+            <ul class="detalle__miniaturas" aria-label="{{t.pieza.galeria}}" data-detalle-miniaturas hidden></ul>
+            <p class="detalle__nota" data-detalle-nota hidden>{{t.pieza.notaFoto}}</p>
+          </div>
+          <div class="detalle__info">
+            <p class="pieza__material" data-detalle-material></p>
+            <h2 class="detalle__titulo" id="detalle-titulo" data-detalle-nombre></h2>
+            <p class="detalle__precio" data-detalle-precio></p>
+            <p class="detalle__descripcion" data-detalle-descripcion></p>
+            <h3 class="detalle__subtitulo">{{t.pieza.caracteristicas}}</h3>
+            <dl class="detalle__caracteristicas" data-detalle-caracteristicas></dl>
+            <div class="detalle__acciones">
+              <button class="btn btn-acento btn-lg" type="button" data-detalle-anadir>{{t.pieza.anadir}}</button>
+              <a class="btn btn-contorno btn-lg" href="#coleccion" target="_blank" rel="noopener noreferrer" data-detalle-pedir>{{{icono.whatsapp}}}<span data-detalle-pedir-texto>{{t.pieza.pedir}}</span><span class="visually-hidden"> ({{t.nuevaPestana}})</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Aviso de privacidad (ventana; sin JavaScript se muestra como sección normal) ===== -->
+  <div class="modal fade privacidad" id="aviso-privacidad" tabindex="-1" aria-labelledby="privacidad-titulo">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen-sm-down">
+      <div class="modal-content">
+        <div class="modal-header privacidad__cabecera">
+          <h2 class="modal-title privacidad__titulo" id="privacidad-titulo">{{t.privacidad.titulo}}</h2>
+          <button class="btn-icono solo-js" type="button" data-bs-dismiss="modal" aria-label="{{t.privacidad.cerrar}}">{{{icono.cerrar}}}</button>
+        </div>
+        <div class="modal-body privacidad__cuerpo" tabindex="0" role="region" aria-labelledby="privacidad-titulo">
+          <p class="privacidad__borrador">{{t.privacidad.borrador}}</p>
+          {{{privacidadSecciones}}}
+        </div>
+        <div class="modal-footer privacidad__pie solo-js">
+          <button class="btn btn-acento" type="button" data-bs-dismiss="modal">{{t.privacidad.cerrar}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Plantillas que usa el JavaScript para construir el catálogo (sin innerHTML) ===== -->
+  <template id="plantilla-categoria">
+    <li class="categoria">
+      <a class="categoria__enlace" href="#coleccion">
+        <span class="categoria__foto"></span>
+        <span class="categoria__texto">
+          <span class="categoria__nombre"></span>
+          <span class="categoria__contador"></span>
+          {{{icono.flecha}}}
+        </span>
+      </a>
+    </li>
+  </template>
+
+  <template id="plantilla-pieza">
+    <li class="pieza">
+      <article class="pieza__tarjeta">
+        <div class="pieza__foto"></div>
+        <p class="pieza__etiqueta" hidden>{{t.masVendidos.etiqueta}}</p>
+        <div class="pieza__cuerpo">
+          <p class="pieza__material"></p>
+          <h3 class="pieza__nombre"><button class="pieza__abrir" type="button" aria-haspopup="dialog"></button></h3>
+          <p class="pieza__precio"></p>
+        </div>
+        <div class="pieza__acciones">
+          <button class="btn btn-acento btn-sm" type="button" data-accion="anadir"><span data-texto>{{t.pieza.anadir}}</span></button>
+          <a class="btn btn-texto btn-sm" href="#coleccion" target="_blank" rel="noopener noreferrer" data-accion="pedir">{{{icono.whatsapp}}}<span data-texto>{{t.pieza.pedir}}</span><span class="visually-hidden"> ({{t.nuevaPestana}})</span></a>
+        </div>
+      </article>
+    </li>
+  </template>
+
+  <template id="plantilla-bolsa-item">
+    <li class="bolsa-item">
+      <span class="bolsa-item__foto"></span>
+      <div class="bolsa-item__texto">
+        <p class="bolsa-item__nombre"></p>
+        <p class="bolsa-item__material"></p>
+        <div class="cantidad" role="group">
+          <button class="cantidad__boton" type="button" data-accion="restar">{{{icono.menos}}}</button>
+          <span class="cantidad__valor" data-cantidad></span>
+          <button class="cantidad__boton" type="button" data-accion="sumar">{{{icono.mas}}}</button>
+        </div>
+      </div>
+      <button class="btn-icono bolsa-item__quitar" type="button" data-accion="quitar">{{{icono.basura}}}</button>
+    </li>
+  </template>
+
+  <template id="plantilla-resultado">
+    <li class="resultado" role="option" aria-selected="false">
+      <span class="resultado__foto"></span>
+      <span class="resultado__texto"><span class="resultado__nombre"></span><span class="resultado__detalle"></span></span>
+    </li>
+  </template>
+
+  <!-- Mensajes para lectores de pantalla (bolsa, filtros). -->
+  <div class="visually-hidden" role="status" aria-live="polite" data-anuncios></div>
+
+  <!-- Datos del sitio para el JavaScript. Es una copia de sitio/datos/, generada al construir. -->
+  {{{datosSitio}}}
+</body>
+</html>
